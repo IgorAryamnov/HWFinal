@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>Калькулятор</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="calculator-frame">
+      <div id="calculator-screen" onclick="inputFocus()">
+        <p id="previous-operation"></p>
+        <input
+          id="calculator-input"
+          value="0"
+          onkeydown="return inputValidation(event)"
+        />
+      </div>
+
+      <div id="buttons-field">
+        <div class="line-buttons">
+          <button class="clear-all-button" id="C" onclick="clearAll()">
+            C
+          </button>
+        </div>
+        <div class="line-buttons">
+          <button class="operation-button" id="clear-input">CE</button>
+          <button class="operation-button" id="deleteOne">⇦</button>
+          <button class="operation-button" id="remainder-of-division">%</button>
+          <button class="operation-button" id="divide">:</button>
+        </div>
+        <div class="line-buttons">
+          <button id="seven">7</button>
+          <button id="eight">8</button>
+          <button id="nine">9</button>
+          <button class="operation-button" id="times">×</button>
+        </div>
+        <div class="line-buttons">
+          <button id="four">4</button>
+          <button id="five">5</button>
+          <button id="six">6</button>
+          <button class="operation-button" id="minus">-</button>
+        </div>
+        <div class="line-buttons">
+          <button id="one">1</button>
+          <button id="two">2</button>
+          <button id="three">3</button>
+          <button class="operation-button" id="plus">+</button>
+        </div>
+        <div class="line-buttons">
+          <button id="zero">0</button>
+          <button id="point">.</button>
+          <button id="equals" onclick="calculateResult()">=</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./calculator.js"></script>
+  </body>
+</html>
